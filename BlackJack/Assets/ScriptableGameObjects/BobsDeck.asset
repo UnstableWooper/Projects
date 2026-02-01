@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9313db41d9aaed54a8e18afa2de0eea7, type: 3}
+  m_Name: BobsDeck
+  m_EditorClassIdentifier: Assembly-CSharp::ScriptableGameObjects.Player
+  cards:
+  - {fileID: 4335816559061147024, guid: 6511aa0a9524fd34989928df23ddce29, type: 3}
+  - {fileID: 2926340679408619900, guid: b0307ec066969144f983788cafd223dc, type: 3}
+  - {fileID: 5695711854109234766, guid: 4fd2b33bcf494d446943ade7c415d0f4, type: 3}
+  - {fileID: 1979095847531602544, guid: b5596043d79a4b34dbc03453cdf616d9, type: 3}
+  - {fileID: 597380078298115831, guid: 459428d5eb7930b43af461eda48adc6f, type: 3}
+  - {fileID: 5666099369563427103, guid: 88a67c8b892a3004baba80e39000c0d7, type: 3}
+  - {fileID: 552743068425771206, guid: 5ff08b736365f924aa1a6c779c0b2894, type: 3}
+  - {fileID: 2840450660552707680, guid: 69c8ed1d929c3cc49b09a1aaf6934eac, type: 3}
+  - {fileID: 4739727550823166619, guid: 0d626912d51682747b47298558869850, type: 3}
+  - {fileID: 6188168421770206695, guid: 62110c5a36a2d3841b1722c4d37bcdde, type: 3}
+  - {fileID: 7223340311853884921, guid: 512551fb3d59d874a8a59c66a1cabcc2, type: 3}
+  - {fileID: 6396435712758856671, guid: 7e23225e582b74040857354dd4ac6e76, type: 3}
+  - {fileID: 1758695940968522919, guid: bc9d3b0aff728514cbf0569c3dee3781, type: 3}

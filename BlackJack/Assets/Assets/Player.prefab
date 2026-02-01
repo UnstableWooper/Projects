@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8126101321050970367
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 908521435074310852}
+  - component: {fileID: 6757266030578556480}
+  m_Layer: 0
+  m_Name: Player
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &908521435074310852
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8126101321050970367}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6757266030578556480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8126101321050970367}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 193cf65a0c1198147835eae27ae28fd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PickCard
+  scoreText: {fileID: 0}
+  cards:
+  - {fileID: 4335816559061147024, guid: 6511aa0a9524fd34989928df23ddce29, type: 3}
+  - {fileID: 2926340679408619900, guid: b0307ec066969144f983788cafd223dc, type: 3}
+  - {fileID: 5695711854109234766, guid: 4fd2b33bcf494d446943ade7c415d0f4, type: 3}
+  - {fileID: 1979095847531602544, guid: b5596043d79a4b34dbc03453cdf616d9, type: 3}
+  - {fileID: 597380078298115831, guid: 459428d5eb7930b43af461eda48adc6f, type: 3}
+  - {fileID: 5666099369563427103, guid: 88a67c8b892a3004baba80e39000c0d7, type: 3}
+  - {fileID: 552743068425771206, guid: 5ff08b736365f924aa1a6c779c0b2894, type: 3}
+  - {fileID: 2840450660552707680, guid: 69c8ed1d929c3cc49b09a1aaf6934eac, type: 3}
+  - {fileID: 4739727550823166619, guid: 0d626912d51682747b47298558869850, type: 3}
+  - {fileID: 6188168421770206695, guid: 62110c5a36a2d3841b1722c4d37bcdde, type: 3}
+  - {fileID: 7223340311853884921, guid: 512551fb3d59d874a8a59c66a1cabcc2, type: 3}
+  - {fileID: 1758695940968522919, guid: bc9d3b0aff728514cbf0569c3dee3781, type: 3}
+  - {fileID: 6396435712758856671, guid: 7e23225e582b74040857354dd4ac6e76, type: 3}
