@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 using ScriptableGameObjects;
 using Unity;
 using Unity.VisualScripting;
@@ -15,7 +17,9 @@ public class EnemyCards : MonoBehaviour
     
     private TMPro.TextMeshProUGUI _scoreText;
     private GameObject _gameManager;
+    private GameObject _player;
     private NextEnemy _nextEnemy;
+    private PickCard _playerPickCard;
     
     private GameObject[] _cards;
 
@@ -26,6 +30,7 @@ public class EnemyCards : MonoBehaviour
     {
         _gameManager = GameObject.FindGameObjectWithTag("GameManager");
         _nextEnemy = _gameManager.GetComponent<NextEnemy>();
+        
         _scoreText = _nextEnemy.ScoreText;
     }
     public void Start()
@@ -34,7 +39,30 @@ public class EnemyCards : MonoBehaviour
         _stand = false;
     }
 
+    private void Update()
+    {
+        if (_player != null)
+        {
+            _playerPickCard = _player.GetComponent<PickCard>();
+        }
+        else
+        {
+            _player = GameObject.FindGameObjectWithTag("Player");
+        }
+    }
+
+    public void PlayerStand()
+    {
+        EnemyHit(); 
+        Invoke(nameof(PlayerStand), 0.5f);
+    }
+
     public void EnemyHit()
+    {
+        Invoke(nameof(Hit), 0.5f);
+    }
+
+    private void Hit()
     {
         int i = Random.Range(1, _cards.Length);
         int cv = _cards[i].GetComponent<CardValue>().value; 

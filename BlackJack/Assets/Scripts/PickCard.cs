@@ -8,27 +8,32 @@ public class PickCard : MonoBehaviour
     [SerializeField] private TMPro.TextMeshProUGUI scoreText; 
     [SerializeField] private GameObject[] cards;
 
+    private EnemyCards _enemyCards;
     private GameObject _enemy;
     private GameObject _gameManager;
     private int _score; 
-    private bool _stand;
+    public bool IsStanding {get;set;}
     
     private void Awake()
     { 
         _gameManager = GameObject.FindGameObjectWithTag("GameManager");
         _score = 0;
-        _stand = false;
+        IsStanding = false;
+    }
+
+    private void Update()
+    {
+        _enemy = GameObject.FindGameObjectWithTag("Enemy");
+        _enemyCards = _enemy.GetComponent<EnemyCards>();
     }
     
     public void Hit()
-    { 
-        _enemy = GameObject.FindGameObjectWithTag("Enemy");
-        EnemyCards enemyCards = _enemy.GetComponent<EnemyCards>();
-        enemyCards.EnemyHit();
+    {
+        _enemyCards.EnemyHit();
         
         int i = Random.Range(1, cards.Length); 
         int cv = cards[i].GetComponent<CardValue>().value; 
-        if (!_stand) 
+        if (!IsStanding) 
         {
             _score += cv; //cv = Card Value
             scoreText.text = _score.ToString(); 
@@ -37,13 +42,14 @@ public class PickCard : MonoBehaviour
             { 
                 scoreText.color = Color.red; 
                 scoreText.text = _score.ToString(); 
-                _stand = true;
+                IsStanding = true;
             }
         }
     }
     
     public void Stand()
     { 
-        _stand = true; 
+        IsStanding = true;
+        _enemyCards.PlayerStand();
     }
 }
